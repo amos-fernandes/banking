@@ -24,7 +24,7 @@ export default function Page() {
         </h1>
 
         <p className="description">
-          Click the button below, and view the sample error on the Sentry <a target="_blank" href="https://aibank-r0.sentry.io/issues/?project=4509117794156544">Issues Page</a>.
+          Click the button below, and view the sample error on the Sentry <a target="_blank" href="https://aibank.sentry.io/issues/?project=4509152085606400">Issues Page</a>.
           For more details about setting up Sentry, <a target="_blank" href="https://docs.sentry.io/platforms/javascript/guides/nextjs/">read our docs</a>.
         </p>
 
