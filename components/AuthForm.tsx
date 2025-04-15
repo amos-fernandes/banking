@@ -98,15 +98,15 @@ const AuthForm = ({ type }: { type: string }) => {
           <div className="flex flex-col gap-1 md:gap-3">
             <h1 className="text-24 lg:text-36 font-semibold text-gray-900">
               {user 
-                ? 'Link Account'
+                ? 'Link Sua Conta'
                 : type === 'sign-in'
-                  ? 'Sign In'
-                  : 'Sign Up'
+                  ? 'Entrar'
+                  : 'Cadastrar-se'
               }
               <p className="text-16 font-normal text-gray-600">
                 {user 
-                  ? 'Link your account to get started'
-                  : 'Please enter your details'
+                  ? 'Conecte com sua conta e comece a usar' 
+                  : 'Entre com seus dados aqui'
                 }
               </p>  
             </h1>
@@ -141,7 +141,7 @@ const AuthForm = ({ type }: { type: string }) => {
 
               <CustomInput control={form.control} name='email' label="Email" placeholder='Entre com seu email' />
 
-              <CustomInput control={form.control} name='password' label="Password" placeholder='Entre com sua Senha' />
+              <CustomInput control={form.control} name='password' label="Senha" placeholder='Entre com sua Senha' />
 
               <div className="flex flex-col gap-4">
                 <Button type="submit" disabled={isLoading} className="form-btn">
@@ -151,7 +151,7 @@ const AuthForm = ({ type }: { type: string }) => {
                       Carregando...
                     </>
                   ) : type === 'sign-in' 
-                    ? 'Sign In' : 'Sign Up'}
+                    ? 'Entrar' : 'Cadastrar'}
                 </Button>
               </div>
             </form>
@@ -160,11 +160,11 @@ const AuthForm = ({ type }: { type: string }) => {
           <footer className="flex justify-center gap-1">
             <p className="text-14 font-normal text-gray-600">
               {type === 'sign-in'
-              ? "Don't have an account?"
-              : "Already have an account?"}
+              ? "Não tem uma conta?"
+              : "Já tem uma conta?"}
             </p>
             <Link href={type === 'sign-in' ? '/sign-up' : '/sign-in'} className="form-link">
-              {type === 'sign-in' ? 'Sign up' : 'Sign in'}
+              {type === 'sign-in' ? 'Cadastrar' : 'Entrar'}
             </Link>
           </footer>
         </>
