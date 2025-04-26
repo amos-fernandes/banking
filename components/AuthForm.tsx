@@ -98,15 +98,15 @@ const AuthForm = ({ type }: { type: string }) => {
           <div className="flex flex-col gap-1 md:gap-3">
             <h1 className="text-24 lg:text-36 font-semibold text-gray-900">
               {user 
-                ? 'Link Account'
+                ? 'Link Sua Conta'
                 : type === 'sign-in'
-                  ? 'Sign In'
-                  : 'Sign Up'
+                  ? 'Entrar'
+                  : 'Cadastrar-se'
               }
               <p className="text-16 font-normal text-gray-600">
                 {user 
-                  ? 'Link your account to get started'
-                  : 'Please enter your details'
+                  ? 'Conecte com sua conta e comece a usar' 
+                  : 'Entre com seus dados aqui'
                 }
               </p>  
             </h1>
@@ -123,35 +123,35 @@ const AuthForm = ({ type }: { type: string }) => {
               {type === 'sign-up' && (
                 <>
                   <div className="flex gap-4">
-                    <CustomInput control={form.control} name='firstName' label="First Name" placeholder='Enter your first name' />
-                    <CustomInput control={form.control} name='lastName' label="Last Name" placeholder='Enter your first name' />
+                    <CustomInput control={form.control} name='firstName' label="Nome" placeholder='Entre com primeiro nome' />
+                    <CustomInput control={form.control} name='lastName' label="Sobrenome" placeholder='Entre com sobrenome' />
                   </div>
-                  <CustomInput control={form.control} name='address1' label="Address" placeholder='Enter your specific address' />
-                  <CustomInput control={form.control} name='city' label="City" placeholder='Enter your city' />
+                  <CustomInput control={form.control} name='address1' label="Endereço" placeholder='Seu endereço' />
+                  <CustomInput control={form.control} name='city' label="Cidade" placeholder='Entre com sua Cidade' />
                   <div className="flex gap-4">
-                    <CustomInput control={form.control} name='state' label="State" placeholder='Example: NY' />
-                    <CustomInput control={form.control} name='postalCode' label="Postal Code" placeholder='Example: 11101' />
+                    <CustomInput control={form.control} name='state' label="UF" placeholder='Exemplo: GO' />
+                    <CustomInput control={form.control} name='postalCode' label="CEP" placeholder='Exemplo: 11101' />
                   </div>
                   <div className="flex gap-4">
-                    <CustomInput control={form.control} name='dateOfBirth' label="Date of Birth" placeholder='YYYY-MM-DD' />
-                    <CustomInput control={form.control} name='ssn' label="SSN" placeholder='Example: 1234' />
+                    <CustomInput control={form.control} name='dateOfBirth' label="Data de Nascimento " placeholder='YYYY-MM-DD' />
+                    <CustomInput control={form.control} name='ssn' label="SSN" placeholder='Exemplo: 1234' />
                   </div>
                 </>
               )}
 
-              <CustomInput control={form.control} name='email' label="Email" placeholder='Enter your email' />
+              <CustomInput control={form.control} name='email' label="Email" placeholder='Entre com seu email' />
 
-              <CustomInput control={form.control} name='password' label="Password" placeholder='Enter your password' />
+              <CustomInput control={form.control} name='password' label="Senha" placeholder='Entre com sua Senha' />
 
               <div className="flex flex-col gap-4">
                 <Button type="submit" disabled={isLoading} className="form-btn">
                   {isLoading ? (
                     <>
                       <Loader2 size={20} className="animate-spin" /> &nbsp;
-                      Loading...
+                      Carregando...
                     </>
                   ) : type === 'sign-in' 
-                    ? 'Sign In' : 'Sign Up'}
+                    ? 'Entrar' : 'Cadastrar'}
                 </Button>
               </div>
             </form>
@@ -160,11 +160,11 @@ const AuthForm = ({ type }: { type: string }) => {
           <footer className="flex justify-center gap-1">
             <p className="text-14 font-normal text-gray-600">
               {type === 'sign-in'
-              ? "Don't have an account?"
-              : "Already have an account?"}
+              ? "Não tem uma conta?"
+              : "Já tem uma conta?"}
             </p>
             <Link href={type === 'sign-in' ? '/sign-up' : '/sign-in'} className="form-link">
-              {type === 'sign-in' ? 'Sign up' : 'Sign in'}
+              {type === 'sign-in' ? 'Cadastrar' : 'Entrar'}
             </Link>
           </footer>
         </>
