@@ -16,7 +16,7 @@ withSentryConfig(withSentryConfig(withSentryConfig(withSentryConfig(nextConfig, 
 
 // Suppresses source map uploading logs during build
 silent: true,
-org: "aibank",
+org: "aibank-y6",
 project: "javascript-nextjs",
 }, {
 // For all available options, see:
@@ -49,7 +49,7 @@ automaticVercelMonitors: true,
 // For all available options, see:
 // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
-org: "aibank",
+org: "aibank-y6",
 project: "javascript-nextjs",
 
 // Only print logs for uploading source maps in CI
@@ -79,7 +79,7 @@ automaticVercelMonitors: true,
 // For all available options, see:
 // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
-org: "aibank",
+org: "aibank-y6",
 project: "javascript-nextjs",
 
 // Only print logs for uploading source maps in CI
@@ -109,7 +109,7 @@ automaticVercelMonitors: true,
 // For all available options, see:
 // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
-org: "aibank",
+org: "aibank-y6",
 project: "javascript-nextjs",
 
 // Only print logs for uploading source maps in CI
@@ -140,7 +140,7 @@ automaticVercelMonitors: true,
 // For all available options, see:
 // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
-org: "aibank",
+org: "aibank-y6",
 project: "javascript-nextjs",
 
 // Only print logs for uploading source maps in CI
@@ -171,7 +171,7 @@ automaticVercelMonitors: true,
 // For all available options, see:
 // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
-org: "aibank",
+org: "aibank-y6",
 project: "aibank-y6",
 
 // Only print logs for uploading source maps in CI
@@ -201,7 +201,7 @@ automaticVercelMonitors: true,
 // For all available options, see:
 // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
-org: "aibank",
+org: "aibank-y6",
 project: "javascript-nextjs",
 
 // Only print logs for uploading source maps in CI
